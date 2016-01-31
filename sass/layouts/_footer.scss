@@ -1,0 +1,51 @@
+footer {
+	text-align: center;
+	line-height: 1px;
+	address{
+		line-height: 0.7em;
+		opacity: 0.8;
+		p:not(:first-of-type) {
+			font-size: 0.9em;
+			font-family: 'lato-italic';
+			opacity: 0.5;
+		}
+	}
+
+	ul {
+		margin: 15px auto 25px auto;
+		li {
+			border-radius: 30px;
+			margin: 6px;
+			padding: 5px;
+			width: 35px;
+			height: 35px;
+			&:first-child{
+				background-color: $twitter;
+			}
+			&:nth-child(2){
+				background-color: $fb;
+			}
+			&:nth-child(3){
+				background-color: $pinterest;
+			}
+			a{
+				color: #fff;
+				font-size: 20px;
+				line-height: 24px;
+				text-align: center;
+			}
+			&:hover a {
+				color: #fff;
+				opacity: 0.5;
+			}
+		}
+	}
+	.credentials {
+		span {
+			font-size: 0.85em;
+			font-family: 'lato-italic';
+			margin-right: 10px;
+			opacity: 0.5;
+		}
+	}
+}

@@ -1,0 +1,161 @@
+section {
+	&#about {
+		padding: 30px 0;
+	}
+}
+
+.content-center {
+	text-align: center;
+	padding: 30px 10px;
+	img {
+		margin-bottom: 10px;
+	}
+	h2 {
+		margin-bottom: 16px;
+	}
+}
+
+.text-container {
+	@extend .content-center;
+	padding: 10% 8% ;
+
+	img {
+		width: 10%;
+		margin: 0 auto;
+	}
+
+	p {
+		position: relative;
+		text-align: justify;
+		line-height: 2em;
+		padding: 0 0 20px 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			bottom: 0;
+			width: 50px;
+			height: 1px;
+			left: calc(50% - 20px);
+			background-color: $dark;
+		}
+	}
+}
+
+.flex-col {
+	position: relative;
+	&:hover + .overlay {
+		transform: scale(1.2);
+	}
+}
+
+.overlay {
+	position: absolute;
+	display: block;
+	opacity: 1;
+	transition: all 0.7s ease-out;
+	&.overlay1 {
+		top: calc(50% - 65px);
+		left: calc(50% - 63px);
+	}
+	&.overlay2 {
+		top: calc(50% - 80px);
+		left: calc(50% - 89px);
+	}
+	&.overlay3 {
+		top: calc(50% - 35px);
+		left: calc(50% - 111px);
+	}
+}
+
+#mycarousel {
+	clear: both;
+	display: block;
+	padding: 50px 0 90px 0;
+	.fa {
+		font-size: 1.6em;
+		color: $twitter;
+	}
+}
+
+.carousel-indicators {
+	bottom: 20px;
+	li {
+		border: 1px solid $dark;
+		opacity: 0.6;
+		&.active {
+			background-color: $dark;
+		}
+	}
+}
+
+.img-shop-wrap {
+	display:block;
+
+	a > img {
+		position: relative;
+		z-index: -1;
+	}
+	.shop-overlay {
+		display: block;
+		position: absolute;
+		
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		opacity: 0;
+		z-index: 5;
+		transition: opacity 0.5s ease-out; 
+
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $accent_overlay;
+			z-index: 0;
+		}
+		img {
+			position: absolute;
+			top: calc(50% - 22px);
+			left: calc(50% - 25px);
+		}
+		p {
+			position: absolute;
+			top: calc(50% + 22px);
+			left: calc(50% - 44px);
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+#discover {
+	padding: 50px 0;
+	background-color: $dark;
+}
+
+#contact {
+	padding: 60px 0;
+	img {
+		width: 85px;
+		height: 75px;
+	}
+	p {
+		font-family: 'lato-italic';
+		font-size: 1.1em;
+		opacity: 0.6;
+		padding: 15px 0;
+	}
+}
+

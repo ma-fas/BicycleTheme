@@ -1,0 +1,141 @@
+@media (min-width: 768px) {
+
+	html,body {
+		height:100%;
+	} 
+
+	.row-flex, .row-flex > div[class*='col-'] {  
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex:1 1 auto;
+	}
+	
+	.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+		width:100%;
+	}
+	.flex-col {
+		display: flex;
+		display: -webkit-flex;
+		flex: 1 100%;
+		flex-flow: column nowrap;
+	}
+	.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+		margin:-.1px; /* hack adjust for wrapping */
+	}
+	#work [class*=col], #shop [class*=col], #discover [class*=col], .container-fluid {
+		position: relative;
+	}
+	.navbar-brand {
+		left: calc(50% - 50px);
+		img {
+			width: 96px;
+			height: 85px;
+		}
+	}
+
+	.navbar {
+		margin-top: 20px;
+	}
+
+	.container-fluid > .navbar-collapse {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.navbar-nav {
+		display: block;
+		width: 100%;
+		margin: 37px auto;
+		vertical-align: middle;
+
+		.menu-left {
+			display: inline-block;
+			float: left;
+		}
+
+		.menu-right {
+			display: inline-block;
+			float: right;
+			margin-left: 50px;
+		}
+		
+		li {
+			display: inline-block;
+			background-color: transparent;
+			text-align: center;
+			menu-shadow: none;
+			padding: none;
+
+			&:first-of-type {
+				padding-top: 0px;
+				background: transparent;
+			}
+			&:last-of-type {
+				padding-bottom: 0px;
+				a{
+					margin-right: 0;
+				}
+			}
+			a{
+				display: block;
+				color: $dark;
+				text-transform: uppercase;
+				padding: 0;
+				font-weight: bold;
+				font-size: 0.95em;
+				margin-right: 50px;
+				letter-spacing: 0.15em;
+			}
+		}
+	}
+
+	.flex-col {
+		flex-flow: column nowrap;
+	}
+	section {
+		&#about {
+			padding: 40px 0;
+		}
+	}
+	
+	#discover {
+		padding: 60px 0;
+	}
+	.btn-discover a {
+		padding: 10px 17px;
+	}
+	footer {
+		line-height: 1px;
+		address {
+			float: left;
+			text-align: left;
+		}
+		.list-inline {
+			margin: 0;
+		}
+		.credentials {
+			float: right;
+			text-align: right;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.container-fluid > .navbar-collapse {
+		width: 55%;
+		max-width: 800px;
+	}
+
+	section {
+		&#about {
+			padding: 50px 0;
+		}
+	}
+
+	#mycarousel {
+		padding: 60px 0 110px 0;
+	}
+}

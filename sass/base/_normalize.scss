@@ -1,0 +1,21 @@
+body {
+	width: 100%;
+}
+
+.container-fluid,
+.col-xs-6,
+.col-xs-12,
+.col-sm-2,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8 {
+	padding: 0;
+}
+
+.row {
+	margin: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
